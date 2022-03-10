@@ -1,0 +1,13 @@
+@media (max-width: 780px) {
+    h5 {
+        display: none;
+    }
+}
+.card-categories:hover {
+    transform: translateY(1rem);
+    cursor: pointer;
+}
+
+.card-categories:hover h5 {
+    color: #06a5e4;
+}

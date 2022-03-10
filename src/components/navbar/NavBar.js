@@ -1,17 +1,18 @@
 import React from "react";
 import logo from "../../assets/logo/Logo_d&p.png";
+import logo3 from "../../assets/logo/logo3.png";
 import "./navbar.css";
 import { FaUserAlt, FaShoppingCart, FaBars } from "react-icons/fa";
 
 const NavBar = () => {
   return (
     <nav
-      className="navbar navbar-expand-md navbar-dark shadow"
+      className="navbar navbar-expand-md navbar-dark shadow fixed-top"
       style={{ backgroundColor: "#06a5e4" }}
     >
       <div className="container">
         <a className="navbar-brand">
-          <img src={logo} alt="logo" className="logo" />
+          <img src={logo3} alt="logo" className="logo" />
         </a>
         <button
           className="navbar-toggler"

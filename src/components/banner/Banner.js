@@ -1,5 +1,4 @@
 import React from "react";
-
 import banner01 from "../../assets/images/banner_01.jpg";
 import banner02 from "../../assets/images/banner_02.jpg";
 import banner03 from "../../assets/images/banner_03.jpg";
@@ -8,7 +7,7 @@ import { Carousel } from "react-responsive-carousel";
 import "./banner.css";
 const Banner = () => {
   return (
-    <>
+    <div style={{ marginTop: "5rem" }}>
       <Carousel
         showThumbs={false}
         autoPlay={true}
@@ -35,7 +34,7 @@ const Banner = () => {
           </div>
         </div>
       </Carousel>
-    </>
+    </div>
   );
 };
 
