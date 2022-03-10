@@ -1,0 +1,34 @@
+.logo {
+    height: 4.5rem;
+    width: auto;
+    cursor: pointer;
+}
+
+.titleSocial {
+    color: white;
+    font-weight: bold;
+}
+
+.titleSocial span {
+    color: #fab207;
+}
+
+.socialMediaIten {
+    border-radius: 50%;
+    padding: 0.3rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.socialMediaIten:hover {
+    background-color: #fab207;
+}
+
+.socialMediaIten:hover .socialmediaicon{
+    color: white !important;
+}
+
+.copyright {
+    color: #fab207;
+}
+

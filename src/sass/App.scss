@@ -1,0 +1,35 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100&display=swap");
+
+//Create custom colors
+$custom-colors: (
+  "custom-blue": #06a5e4,
+  "custom-yellow": #fab207,
+  "custom-black": #1f150d,
+  "custom-orange": #d27711,
+  "custom-lightyellow": #f5e37d,
+  "custom-grey": #666666,
+);
+
+//merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+* {
+  font-family: "Poppins", sans-serif;
+  transition: all 0.2s linear;
+}
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: #fab207;
+  border-radius: 5rem;
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

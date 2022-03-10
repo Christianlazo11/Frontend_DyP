@@ -1,0 +1,86 @@
+.logo {
+    height: 4.5rem;
+    width: auto;
+    cursor: pointer;
+}
+
+.navItem {
+    border-bottom: 2px solid transparent;
+}
+
+.nav-item:hover {
+    animation: myLinks 1s ease 0s 1 normal forwards;
+}
+
+.buttonNav {
+    border: solid 2px white;
+    padding: 0.2rem 1rem;
+    border-radius: 2rem; 
+    font-size: 1rem !important;
+}
+
+.buttonNav:hover {
+    background-color: #fab207;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+  }
+  
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: #fab207;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+  
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+@keyframes myLinks {
+    0%,
+    100% {
+      transform: rotate(0deg);
+      transform-origin: 50% 100%;
+    }
+  
+    10% {
+      transform: rotate(2deg);
+    }
+  
+    20%,
+    40%,
+    60% {
+      transform: rotate(-4deg);
+    }
+  
+    30%,
+    50%,
+    70% {
+      transform: rotate(4deg);
+    }
+  
+    80% {
+      transform: rotate(-2deg);
+    }
+  
+    90% {
+      transform: rotate(2deg);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav-item:hover {
+        animation: none;
+    }
+  }

@@ -1,0 +1,37 @@
+.bannerImg {
+    height: 600px;
+}
+
+.carousel .legend {
+    background-color: transparent !important;
+    display: flex;
+    justify-content: center;
+    border: none;
+}
+
+.carousel .legend a{
+    text-decoration: none;
+    color: white;
+    background-color: #fab207;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media (max-width: 640px) {
+    .carousel .legend a {
+        font-size: 1rem;
+    }
+}
+
+.dot {
+    background-color: #f5e37d !important;
+    border: none !important;
+}
+
+@media(max-width: 960px) {
+    .bannerImg {
+        height: auto;
+    }
+}
