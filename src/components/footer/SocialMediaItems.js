@@ -1,6 +1,5 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const SocialMediaItems = () => {
   return (
