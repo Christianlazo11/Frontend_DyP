@@ -1,0 +1,29 @@
+.cardItem {
+    box-shadow: 8px 10px 10px -4px rgba(0,0,0,0.68);
+}
+.cardItem:hover {
+    transform: translateY(0.2rem);
+}
+
+.btn-cardItem-yellow {
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    background-color: #06a5e4;
+    padding: 0.5rem 0.8rem;
+}
+
+.btn-cardItem-blue {
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    background-color: #fab207;
+    padding: 0.5rem 0.8rem;
+}
+
+.btn-cardItem-yellow:hover {
+    background-color: #094F6A;
+}
+.btn-cardItem-blue:hover {
+    background-color: #d27711;
+}

@@ -5,9 +5,10 @@ import banner03 from "../../assets/images/banner_03.jpg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import "./banner.css";
+import { NavLink } from "react-router-dom";
 const Banner = () => {
   return (
-    <div style={{ marginTop: "5rem" }}>
+    <div style={{ marginTop: "2rem" }}>
       <Carousel
         showThumbs={false}
         autoPlay={true}
@@ -18,19 +19,19 @@ const Banner = () => {
         <div>
           <img src={banner01} alt="banner01" className="bannerImg" />
           <div className="legend">
-            <a href="">Ver Productos</a>
+            <NavLink to="/products">Ver Productos</NavLink>
           </div>
         </div>
         <div>
           <img src={banner02} alt="banner02" className="bannerImg" />
           <div className="legend">
-            <a href="">Ver Productos</a>
+            <NavLink to="/products">Ver Productos</NavLink>
           </div>
         </div>
         <div>
           <img src={banner03} alt="banner03" className="bannerImg" />
           <div className="legend">
-            <a href="">Ver Productos</a>
+            <NavLink to="/products">Ver Productos</NavLink>
           </div>
         </div>
       </Carousel>

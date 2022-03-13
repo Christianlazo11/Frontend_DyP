@@ -1,0 +1,22 @@
+.cardLogin {
+    background-color: #f5e37d !important;
+    border-radius: 1rem !important;
+}
+
+.cardLogin input {
+    border-radius: 2rem;
+    border: none;
+}
+
+.cardLogin button {
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #06a5e4;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.cardLogin button:hover {
+    padding: 0.5rem 2rem;
+}

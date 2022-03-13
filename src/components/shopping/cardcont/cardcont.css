@@ -1,0 +1,7 @@
+.cardcont span{
+    cursor: pointer;
+}
+
+.cardcont .max, .min {
+    color: #06a5e4;
+}

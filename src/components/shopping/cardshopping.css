@@ -1,0 +1,10 @@
+.text-delete {
+    color: #06a5e4;
+    cursor: pointer;
+}
+
+.cardshopping-img {
+    max-height: 6rem;
+    border-radius: 50%;
+    background-color: white;
+}

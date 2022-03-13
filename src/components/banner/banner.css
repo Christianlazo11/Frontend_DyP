@@ -1,5 +1,5 @@
 .bannerImg {
-    height: 600px;
+    height: 700px;
 }
 
 .carousel .legend {
@@ -35,3 +35,10 @@
         height: auto;
     }
 }
+
+@media (max-width:1200px) {
+    .bannerImg {
+        width: auto;
+    }
+}
+

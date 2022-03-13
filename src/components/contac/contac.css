@@ -1,0 +1,32 @@
+.cardleft {
+    background-color: #f5e37d !important;
+}
+
+.cardleft input, textarea {
+    outline: none;
+}
+
+.cardleft button {
+    border: none;
+    border-radius: 2rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+    background-color: #06a5e4;
+}
+
+.cardleft button:hover {
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.cardContact:hover{
+    transform: translateY(1rem);
+}
+
+@media (min-width: 990px) {
+    .cardright {
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

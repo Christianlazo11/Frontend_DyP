@@ -1,8 +1,8 @@
 import React from "react";
-import logo from "../../assets/logo/Logo_d&p.png";
 import logo3 from "../../assets/logo/logo3.png";
 import "./navbar.css";
 import { FaUserAlt, FaShoppingCart, FaBars } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -11,9 +11,9 @@ const NavBar = () => {
       style={{ backgroundColor: "#06a5e4" }}
     >
       <div className="container">
-        <a className="navbar-brand">
+        <NavLink to="/" className="navbar-brand">
           <img src={logo3} alt="logo" className="logo" />
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -30,42 +30,42 @@ const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mb-2 mb-lg-0 ms-auto">
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">
+              <NavLink className="nav-link" aria-current="page" to="/">
                 <span className="text-white fw-bold navItem hover-underline-animation">
                   Inicio
                 </span>
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link" to="/">
                 <span className="text-white fw-bold  navItem hover-underline-animation">
                   Contacto
                 </span>
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link" to="/products">
                 <span className="text-white fw-bold  navItem hover-underline-animation">
                   Productos
                 </span>
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link" to="/shopping-car">
                 <span className="text-white fw-bold  buttonNav">
                   Carrito
                   <FaShoppingCart className="mb-1 ms-1" />
                 </span>
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link" to="/login">
                 <span className="text-white fw-bold  buttonNav">
                   {" "}
                   Login
                   <FaUserAlt className="mb-1 ms-1" />
                 </span>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
