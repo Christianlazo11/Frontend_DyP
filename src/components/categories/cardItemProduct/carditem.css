@@ -20,7 +20,16 @@
     background-color: #fab207;
     padding: 0.5rem 0.8rem;
 }
-
+.btn-cardItem-danger {
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    background-color: #cc4200;
+    padding: 0.5rem 0.8rem;
+}
+.btn-cardItem-danger:hover {
+    background-color: #f70000;
+}
 .btn-cardItem-yellow:hover {
     background-color: #094F6A;
 }

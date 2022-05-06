@@ -5,9 +5,26 @@ import Products from "./pages/Products";
 import Login from "./pages/Login";
 import ShoppingCar from "./pages/ShoppingCar";
 import NotFoundPage from "./pages/NotFoundPage";
+import ContactPage from "./pages/ContactPage";
 import NavBar from "./components/navbar/NavBar";
 import Footer from "./components/footer/Footer";
+import { CartState } from "./context/Context";
+import { getDataProducts } from "./services/getProducts";
+import { useEffect } from "react";
 function App() {
+  const { state, dispatch } = CartState();
+
+  useEffect(() => {
+    const getData = async () => {
+      let newData = await getDataProducts();
+      dispatch({
+        type: "SET_DATA",
+        payload: newData,
+      });
+      console.log(state);
+    };
+    getData();
+  }, []);
   return (
     <BrowserRouter>
       <NavBar />
@@ -16,6 +33,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/login" element={<Login />} />
         <Route path="/shopping-car" element={<ShoppingCar />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

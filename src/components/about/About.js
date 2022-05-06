@@ -17,10 +17,11 @@ const About = () => {
         </div>
         <div className="col-sm-12 col-md-6 d-flex flex-column justify-content-center align-items-center p-3">
           <p className="mb-3 text-white">
-            La Empresa nació en el 2020, Fundada por Miguel Apraez, con la
-            mentalidad de cubrir las necesidades de las personas en el nicho de
-            Globos, al ver que no se contaba con una empresa que de un buen
-            servicio y que se ajuste a las necesidades de los clientes.
+            La Empresa nació en el 2020, Fundada por Miguel Apraez y Paola
+            Andrea Lazo, con la mentalidad de cubrir las necesidades de las
+            personas en el nicho de Globos, al ver que no se contaba con una
+            empresa que de un buen servicio y que se ajuste a las necesidades de
+            los clientes.
           </p>
           <p className="text-white">
             La Misión de la empresa es brindar a todos nuestros clientes él más

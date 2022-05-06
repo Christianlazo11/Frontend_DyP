@@ -5,10 +5,13 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 //eslint-disable-next-line no-unused-vars
 import * as bootstrap from "bootstrap";
+import Context from "./context/Context";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Context>
+      <App />
+    </Context>
   </React.StrictMode>,
   document.getElementById("root")
 );

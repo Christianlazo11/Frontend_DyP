@@ -3,8 +3,12 @@ import logo3 from "../../assets/logo/logo3.png";
 import "./navbar.css";
 import { FaUserAlt, FaShoppingCart, FaBars } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { CartState } from "../../context/Context";
 
 const NavBar = () => {
+  const {
+    state: { cart },
+  } = CartState();
   return (
     <nav
       className="navbar navbar-expand-md navbar-dark shadow fixed-top"
@@ -37,7 +41,7 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/">
+              <NavLink className="nav-link" to="/contact">
                 <span className="text-white fw-bold  navItem hover-underline-animation">
                   Contacto
                 </span>
@@ -55,6 +59,9 @@ const NavBar = () => {
                 <span className="text-white fw-bold  buttonNav">
                   Carrito
                   <FaShoppingCart className="mb-1 ms-1" />
+                  <span style={{ fontSize: "0.6rem", fontWeight: "300" }}>
+                    {cart.length}
+                  </span>
                 </span>
               </NavLink>
             </li>

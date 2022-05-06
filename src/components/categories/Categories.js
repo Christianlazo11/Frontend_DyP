@@ -3,7 +3,6 @@ import "./categories.css";
 import category01 from "../../assets/images/category_01.jpg";
 import category02 from "../../assets/images/category_02.jpg";
 import category03 from "../../assets/images/category_03.jpg";
-import category04 from "../../assets/images/category_04.jpg";
 import category05 from "../../assets/images/category_05.jpg";
 
 const Categories = () => {
@@ -57,20 +56,6 @@ const Categories = () => {
               />
             </div>
             <h5 className="text-center">Cortinas</h5>
-          </div>
-        </div>
-
-        <div className="col">
-          <div className="card bg-transparent border-0 card-categories">
-            <div className="card border-0">
-              <img
-                src={category04}
-                alt="category04"
-                className="img-fluid"
-                style={{ maxHeight: "12rem" }}
-              />
-            </div>
-            <h5 className="text-center">Serpentinas</h5>
           </div>
         </div>
 
