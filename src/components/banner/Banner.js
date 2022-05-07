@@ -19,19 +19,19 @@ const Banner = () => {
         <div>
           <img src={banner01} alt="banner01" className="bannerImg" />
           <div className="legend">
-            <NavLink to="/products">Ver Productos</NavLink>
+            <NavLink to="/products/todos">Ver Productos</NavLink>
           </div>
         </div>
         <div>
           <img src={banner02} alt="banner02" className="bannerImg" />
           <div className="legend">
-            <NavLink to="/products">Ver Productos</NavLink>
+            <NavLink to="/products/todos">Ver Productos</NavLink>
           </div>
         </div>
         <div>
           <img src={banner03} alt="banner03" className="bannerImg" />
           <div className="legend">
-            <NavLink to="/products">Ver Productos</NavLink>
+            <NavLink to="/products/todos">Ver Productos</NavLink>
           </div>
         </div>
       </Carousel>
