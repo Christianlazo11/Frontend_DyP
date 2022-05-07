@@ -1,6 +1,7 @@
 import React from "react";
 import "./carditem.css";
 import { CartState } from "../../../context/Context";
+import { Link } from "react-router-dom";
 const CardItemProduct = ({ prop }) => {
   const {
     state: { cart },
@@ -14,8 +15,6 @@ const CardItemProduct = ({ prop }) => {
     });
   };
 
-  console.log(cart);
-
   const removeCart = (product) => {
     dispatch({
       type: "REMOVE_FROM_CART",
@@ -28,7 +27,6 @@ const CardItemProduct = ({ prop }) => {
       <div className="card cardItem">
         <div className="d-flex justify-content-center">
           <img
-            // src="https://misterpinatas.com/wp-content/uploads/2019/01/DEC0008-3.jpg"
             src={prop.urlImage}
             alt="mis"
             className="img-fluid"
@@ -42,7 +40,22 @@ const CardItemProduct = ({ prop }) => {
             <span className="text-success">$</span> {prop.price}
           </p>
           <div className="d-flex align-items-center justify-content-center gap-2">
-            <button className="btn-cardItem-blue">Comprar</button>
+            {cart.some((p) => p.id === prop.id) ? (
+              <Link to="/shopping-car" className="btn-cardItem-blue">
+                Comprar
+              </Link>
+            ) : (
+              <Link
+                to="/shopping-car"
+                className="btn-cardItem-blue"
+                onClick={() => {
+                  addCart(prop);
+                }}
+              >
+                Comprar
+              </Link>
+            )}
+
             {cart.some((p) => p.id === prop.id) ? (
               <button
                 className="btn-cardItem-danger"

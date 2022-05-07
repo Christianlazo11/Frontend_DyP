@@ -48,7 +48,7 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li className="nav-item dropdown">
-              <NavLink className="nav-link" to="/products">
+              <NavLink className="nav-link" to="/products/todos">
                 <span className="text-white fw-bold  navItem hover-underline-animation">
                   Productos
                 </span>

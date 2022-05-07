@@ -4,7 +4,19 @@
 }
 
 .cardshopping-img {
-    max-height: 6rem;
+    height: 6rem !important;
+    width: 6rem;
     border-radius: 50%;
     background-color: white;
+}
+
+.cardshopping-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mycardshopping {
+    background-color: #f5e37d !important;
+    min-height: 10rem;
 }

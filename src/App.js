@@ -12,7 +12,7 @@ import { CartState } from "./context/Context";
 import { getDataProducts } from "./services/getProducts";
 import { useEffect } from "react";
 function App() {
-  const { state, dispatch } = CartState();
+  const { dispatch } = CartState();
 
   useEffect(() => {
     const getData = async () => {
@@ -21,16 +21,15 @@ function App() {
         type: "SET_DATA",
         payload: newData,
       });
-      console.log(state);
     };
     getData();
-  }, []);
+  }, [dispatch]);
   return (
     <BrowserRouter>
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
+        <Route path="/products/:category" element={<Products />} />
         <Route path="/login" element={<Login />} />
         <Route path="/shopping-car" element={<ShoppingCar />} />
         <Route path="/contact" element={<ContactPage />} />

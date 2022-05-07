@@ -11,6 +11,7 @@
     color: white;
     background-color: #06a5e4;
     padding: 0.5rem 0.8rem;
+    text-decoration: none;
 }
 
 .btn-cardItem-blue {
@@ -19,6 +20,7 @@
     color: white;
     background-color: #fab207;
     padding: 0.5rem 0.8rem;
+    text-decoration: none;
 }
 .btn-cardItem-danger {
     border: none;
@@ -26,13 +28,17 @@
     color: white;
     background-color: #cc4200;
     padding: 0.5rem 0.8rem;
+    text-decoration: none;
 }
 .btn-cardItem-danger:hover {
     background-color: #f70000;
+    color: white;
 }
 .btn-cardItem-yellow:hover {
     background-color: #094F6A;
+    color: white;
 }
 .btn-cardItem-blue:hover {
     background-color: #d27711;
+    color: white;
 }

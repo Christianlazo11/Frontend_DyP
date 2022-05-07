@@ -4,6 +4,7 @@ import category01 from "../../assets/images/category_01.jpg";
 import category02 from "../../assets/images/category_02.jpg";
 import category03 from "../../assets/images/category_03.jpg";
 import category05 from "../../assets/images/category_05.jpg";
+import { Link } from "react-router-dom";
 
 const Categories = () => {
   return (
@@ -18,7 +19,11 @@ const Categories = () => {
 
       <div className="row">
         <div className="col">
-          <div className="card bg-transparent border-0 card-categories">
+          <Link
+            to="/products/globos"
+            className="card bg-transparent border-0 card-categories"
+            style={{ textDecoration: "none", color: "black" }}
+          >
             <div className="card border-0">
               <img
                 src={category01}
@@ -28,11 +33,15 @@ const Categories = () => {
               />
             </div>
             <h5 className="text-center">Globos</h5>
-          </div>
+          </Link>
         </div>
 
         <div className="col">
-          <div className="card bg-transparent border-0 card-categories">
+          <Link
+            to="/products/velas"
+            className="card bg-transparent border-0 card-categories"
+            style={{ textDecoration: "none", color: "black" }}
+          >
             <div className="card border-0">
               <img
                 src={category02}
@@ -42,11 +51,15 @@ const Categories = () => {
               />
             </div>
             <h5 className="text-center">Velas</h5>
-          </div>
+          </Link>
         </div>
 
         <div className="col">
-          <div className="card bg-transparent border-0 card-categories">
+          <Link
+            to="/products/cortinas"
+            className="card bg-transparent border-0 card-categories"
+            style={{ textDecoration: "none", color: "black" }}
+          >
             <div className="card border-0">
               <img
                 src={category03}
@@ -56,11 +69,15 @@ const Categories = () => {
               />
             </div>
             <h5 className="text-center">Cortinas</h5>
-          </div>
+          </Link>
         </div>
 
         <div className="col">
-          <div className="card bg-transparent border-0 card-categories">
+          <Link
+            to="/products/accesorios"
+            className="card bg-transparent border-0 card-categories"
+            style={{ textDecoration: "none", color: "black" }}
+          >
             <div className="card border-0">
               <img
                 src={category05}
@@ -70,7 +87,7 @@ const Categories = () => {
               />
             </div>
             <h5 className="text-center">Accesorios</h5>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

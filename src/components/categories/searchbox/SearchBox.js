@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaSearch } from "react-icons/fa";
 import "./searchbox.css";
+import { CartState } from "../../../context/Context";
 
 const SearchBox = () => {
-  const [value, setValue] = useState("");
+  const {
+    productDispatch,
+    productState: { searchQuery },
+  } = CartState();
 
   return (
     <div className="d-flex justify-content-center align-items-center mb-5">
@@ -11,7 +15,6 @@ const SearchBox = () => {
         className="form-search"
         onSubmit={(e) => {
           e.preventDefault();
-          setValue("");
         }}
       >
         <button type="submit" className="border-0 bg-transparent">
@@ -21,9 +24,12 @@ const SearchBox = () => {
           type="text"
           placeholder="Buscar Productos..."
           onChange={(e) => {
-            setValue(e.target.value);
+            productDispatch({
+              type: "FILTER_BY_SEARCH",
+              payload: e.target.value,
+            });
           }}
-          value={value}
+          value={searchQuery}
         />
       </form>
     </div>

@@ -1,5 +1,5 @@
 import React, { createContext, useReducer, useContext } from "react";
-import { cartReducer } from "./Reducers";
+import { cartReducer, productReducer } from "./Reducers";
 
 const Cart = createContext();
 
@@ -8,8 +8,17 @@ const Context = ({ children }) => {
     products: [],
     cart: [],
   });
+
+  const [productState, productDispatch] = useReducer(productReducer, {
+    byCategory: "",
+    searchQuery: "",
+  });
   //   eslint-disable-next-line react/jsx-no-undef
-  return <Cart.Provider value={{ state, dispatch }}>{children}</Cart.Provider>;
+  return (
+    <Cart.Provider value={{ state, dispatch, productState, productDispatch }}>
+      {children}
+    </Cart.Provider>
+  );
 };
 
 export const CartState = () => {

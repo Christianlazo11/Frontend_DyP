@@ -1,9 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import "./cardfilters.css";
+import { CartState } from "../../../context/Context";
 
 const CardFilters = () => {
-  const [category, setCategory] = useState("all");
-  console.log(category);
+  const { productDispatch } = CartState();
+
+  const filterCategory = (data) => {
+    productDispatch({
+      type: "FILTER_BY_SEARCH",
+      payload: "",
+    });
+    productDispatch({
+      type: "FILTER_BY_CATEGORY",
+      payload: data,
+    });
+  };
+
   return (
     <div className="d-flex justify-content-center align-items-center my-5">
       <div className="btn-group d-flex flex-wrap" role="group">
@@ -11,7 +23,7 @@ const CardFilters = () => {
           type="button"
           className="btn btn-blue text-white fs-4"
           onClick={() => {
-            setCategory("all");
+            filterCategory("");
           }}
         >
           Todos
@@ -19,39 +31,35 @@ const CardFilters = () => {
         <button
           type="button"
           className="btn btn-blue text-white fs-4"
-          onClick={() => setCategory("ballon")}
+          onClick={() => filterCategory("globos")}
         >
           GLobos
         </button>
         <button
           type="button"
           className="btn btn-blue text-white fs-4"
-          onClick={() => setCategory("candles")}
+          onClick={() => filterCategory("velas")}
         >
           Velas
         </button>
         <button
           type="button"
           className="btn btn-blue text-white fs-4"
-          onClick={() => setCategory("curtains")}
+          onClick={() => filterCategory("cortinas")}
         >
           Cortinas
         </button>
         <button
           type="button"
           className="btn btn-blue text-white fs-4"
-          onClick={() => {
-            setCategory("serpentines");
-          }}
+          onClick={() => filterCategory("serpentinas")}
         >
           Serpentinas
         </button>
         <button
           type="button"
           className="btn btn-blue text-white fs-4"
-          onClick={() => {
-            setCategory("accessories");
-          }}
+          onClick={() => filterCategory("accesorios")}
         >
           Accesorios
         </button>
